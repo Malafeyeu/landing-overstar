@@ -1,4 +1,3 @@
-
 import cls from './Header.module.scss'
 import Image from 'next/image'
 import earthGif from '@/src/shared/assets/giphy.gif'
@@ -34,6 +33,14 @@ const Header: FC = () => {
       </div>
     </header>
   );
+};
+
+export const getStaticProps = async () => {
+  // Логика получения данных для Header, если требуется
+  return {
+    props: {},
+    revalidate: 60 * 60, // Обновление каждый час
+  };
 };
 
 export default Header;
