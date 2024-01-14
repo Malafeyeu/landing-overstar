@@ -7,8 +7,9 @@ import { BurgerMenu } from '@/src/features';
 import { AppLink, LogoMain } from '@/src/shared';
 import { INav } from '@/src/app/types';
 import { NavBar, navLinks } from '@/src/entities';
+import { FC } from 'react';
 
-const HeaderMenu = () => {
+const HeaderMenu: FC = () => {
   return (
     <header className={cls.header}>
       <div className={cls.flex_box}>

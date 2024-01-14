@@ -1,6 +1,6 @@
 'use client'
 
-import { IJob } from '@/src/pages/Career';
+import { IJob } from '@/src/app/types';
 import cls from './CardFromCareer.module.scss';
 import Image from 'next/image';
 import { FC } from 'react';

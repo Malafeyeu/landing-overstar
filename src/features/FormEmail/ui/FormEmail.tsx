@@ -1,8 +1,8 @@
 
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import cls from './FormEmail.module.scss'
 
-const FormEmail = () => {
+const FormEmail: FC = () => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInput = (event: any) => {

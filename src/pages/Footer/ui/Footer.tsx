@@ -11,6 +11,7 @@ import {
 import Image from 'next/image';
 import { IconLink } from '@/src/shared';
 import { FormEmail } from '@/src/features';
+import { FC } from 'react';
 
 const arrIcons = [
   {telegram: Telegram},
@@ -19,7 +20,7 @@ const arrIcons = [
   {discord: Discord},
 ];
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <footer className={cls.container_footer}>
       <div className={cls.flex_block}>

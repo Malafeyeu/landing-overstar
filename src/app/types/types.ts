@@ -83,6 +83,17 @@ interface AppLinkProps extends LinkProps {
   children?: ReactNode;
 }
 
+interface IJob {
+  img: StaticImageData;
+  title: string;
+  requirements1: string;
+  requirements2: string;
+  requirements3: string;
+  requirements4: string;
+  requirements5: string;
+}
+
+
 export {
   type ICarouselProps,
   type IItemsProject,
@@ -96,5 +107,6 @@ export {
   type IItemsFromCarousel,
   type ISelectedPostProps,
   type IIconLinkProps,
-  type AppLinkProps
+  type AppLinkProps,
+  type IJob
 }

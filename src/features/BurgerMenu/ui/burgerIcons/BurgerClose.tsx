@@ -1,5 +1,6 @@
+import { FC } from "react";
 
-const BurgerClose = ({onClick}: any) => {
+const BurgerClose: FC<any> = ({onClick}) => {
   return (
     <svg 
       style={{

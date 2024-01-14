@@ -3,8 +3,9 @@
 import cls from './AboutUs.module.scss';
 import gif from '@/src/shared/assets/AboutUs.gif';
 import Image from 'next/image';
+import { FC } from 'react';
 
-const AboutUs = () => {
+const AboutUs: FC = () => {
   return (
     <section className={cls.container_aboutUs}>
         <div className={cls.flex_block}>

@@ -1,31 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
+'use client'
 
-const LazyLoadComponent = () => {
-  const [items, setItems] = useState<number[]>([]);
-  const [hasMore, setHasMore] = useState(true);
+import AboutUs from '@/src/pages/AboutUs/ui/AboutUs';
+import Career from '@/src/pages/Career/ui/Career';
+import Footer from '@/src/pages/Footer/ui/Footer';
+import HomePage from '@/src/pages/HomePage/ui/HomePage';
+import React, { useState, useEffect, FC } from 'react';
 
-  const fetchData = () => {
-    // Загрузка данных (может быть ваш запрос к API)
-    const newItems = Array.from({ length: 10 }, (_, index) => items.length + index + 1);
-    setItems([...items, ...newItems]);
+const LazyLoadComponent: FC = () => {
+  const [loadedComponents, setLoadedComponents] = useState<React.ReactNode[]>([]);
+  const [pageIndex, setPageIndex] = useState<number>(0);
 
-    // После успешной загрузки данных, решите, есть ли еще элементы для загрузки
-    setHasMore(items.length < 50); // Например, загружайте только первые 50 элементов
+  const arrPages = [HomePage, AboutUs, Career, Footer];
+
+  const loadPage = () => {
+    if (pageIndex < arrPages.length) {
+      const Page = arrPages[pageIndex];
+      const newComponent = <Page />
+      setLoadedComponents((prevComponent) => [...prevComponent, newComponent]);
+      setPageIndex((prevIndex) => prevIndex + 1);
+    }
+  }
+
+  const handleScroll = () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      loadPage()
+    }
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [pageIndex]);
   return (
-    <InfiniteScroll
-      dataLength={items.length}
-      next={fetchData}
-      hasMore={hasMore}
-      loader={<p>Loading...</p>}
-      endMessage={<p>No more items</p>}
-    >
-      {items.map((item) => (
-        <div key={item}>{item}</div>
+    <>
+      {loadedComponents.map((component, index) => (
+        <React.Fragment key={index}>{component}</React.Fragment>
       ))}
-    </InfiniteScroll>
+    </>
   );
 };
 

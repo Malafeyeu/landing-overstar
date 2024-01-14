@@ -1,5 +1,6 @@
+import { FC } from 'react';
 
-const BurgerActive = ({onClick}: any) => {
+const BurgerActive: FC<any> = ({onClick}) => {
   return (
     <svg
       style={{

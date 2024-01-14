@@ -4,8 +4,9 @@ import Image from 'next/image'
 import earthGif from '@/src/shared/assets/giphy.gif'
 import maskGif from '@/src/shared/assets/Mask.gif';
 import { HeaderMenu } from '@/src/widgets';
+import { FC } from 'react';
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <header className={cls.container_header}>
       <HeaderMenu />

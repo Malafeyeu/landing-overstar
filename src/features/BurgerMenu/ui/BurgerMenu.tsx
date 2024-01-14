@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import BurgerActive from './burgerIcons/BurgerActive';
 import BurgerClose from './burgerIcons/BurgerClose';
 import cls from './BurgerMenu.module.scss';
 import { INav } from '@/src/app/types';
 import { NavBar, navLinks } from '@/src/entities';
 
-const BurgerMenu = () => {
+const BurgerMenu: FC = () => {
   const [active, setActive] = useState(false);
 
   const handler = () => {

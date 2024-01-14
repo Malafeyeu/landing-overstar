@@ -1,22 +1,12 @@
 'use client'
 
 import cls from './Career.module.scss';
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import img1 from '@/src/shared/assets/Fire.png';
 import img2 from '@/src/shared/assets/Hearth.png';
 import img3 from '@/src/shared/assets/User.png';
-import { StaticImageData } from 'next/image';
 import { CardFromCareer } from '@/src/shared';
-
-export interface IJob {
-  img: StaticImageData;
-  title: string;
-  requirements1: string;
-  requirements2: string;
-  requirements3: string;
-  requirements4: string;
-  requirements5: string;
-}
+import { IJob } from '@/src/app/types';
 
 const job: IJob[] = [
   {
@@ -48,7 +38,7 @@ const job: IJob[] = [
   },
 ];
 
-const Career = () => {
+const Career: FC = () => {
   const [careerData, setCareerData] = useState<IJob[]>([]);
 
   useEffect(() => {

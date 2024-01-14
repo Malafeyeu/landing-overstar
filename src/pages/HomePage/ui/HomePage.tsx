@@ -1,12 +1,12 @@
 'use client'
 
 import cls from './HomePage.module.scss';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import Image from 'next/image';
 import bg from '@/src/shared/assets/proj.gif';
 import { Carousel, SelectedProject } from '@/src/widgets';
 
-const HomePage = () => {
+const HomePage: FC = () => {
   const [activeIndex, setActiveIndex] = useState(2);
   const [showGame, setShowGame] = useState(false);
 

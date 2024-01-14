@@ -1,6 +1,1 @@
-export * from '../../features/Carousel/ui/Carousel'
-export * from '../../features/Carousel/ui/CarouselIndicator'
 export * from './ui/HomePage'
-export * from '../../features/Carousel/ui/ItemCarousel'
-export * from '../../widgets/SelectedProject/ui/SelectedProject'
-export * from './ui/GamePage.module.scss'
