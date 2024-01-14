@@ -1,0 +1,16 @@
+.block_w_nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  svg {
+    cursor: pointer;
+    margin: 0 30px;
+  }
+  .end {
+    width: 24px;
+    height: 24px;
+    margin: 0 30px;
+  }
+}
+

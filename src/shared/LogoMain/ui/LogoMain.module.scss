@@ -1,0 +1,9 @@
+.header_logo {
+  cursor: pointer;
+  width: 170px;
+  height: 32.5px;
+  @media(max-width: 768px) {
+    width: 125px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,22 @@
+.nav_list {
+  display: inline-flex;
+  gap: 32px;
+  .nav_list__item {
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-m);
+    letter-spacing: 3px;
+  }
+  .nav_list__item_contact {
+    cursor: pointer;
+    border: 1px solid var(--color-main);
+    border-radius: 5px;
+    padding: 11px 13px;
+    list-style: none;
+    font-family: var(--font-m);
+    letter-spacing: 3px;
+  }
+  @media(max-width: 768px) {
+    display: none;
+  }
+}

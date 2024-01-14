@@ -1,0 +1,21 @@
+@import '../../../app/styles/variables/globals.scss';
+
+.item:hover {
+  box-shadow: 0px 0px 100px 0px #514ED8;
+  border-radius: 25px;
+}
+.item {
+  width: var(--width-card-desktop);
+  height: var(--height-card-desktop);
+  position: absolute;
+  @media(max-width: 768px) {
+    width: var(--width-card-mobile);
+    height: var(--height-card-mobile);
+  }
+  cursor: pointer;
+  overflow: hidden;
+  transition-duration: 700ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 80ms;
+}

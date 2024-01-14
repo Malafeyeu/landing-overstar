@@ -1,0 +1,27 @@
+.nav_list {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 26px;
+  .nav_list__item {
+    color: var(--color-main);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--font-line-m);
+    letter-spacing: 3px;
+  }
+  .nav_list__item_games {
+    padding: 3px 19px 4px 20px;
+    color: var(--color-main);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--font-line-m);
+    letter-spacing: 3px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #5F0000 13.76%, #0500FF 72.56%);
+  }
+}

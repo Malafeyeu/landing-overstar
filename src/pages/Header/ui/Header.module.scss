@@ -1,0 +1,94 @@
+@import '../../../app/styles/variables/globals.scss';
+
+.container_header {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 1040px;
+  @media(max-width: 768px) {
+    height: var(--height-mobile);
+  }
+  .block_w_gif {
+    position: absolute;
+    margin: var(--header-height-desktop) auto 0 auto;
+    width: 100%;
+    height: calc((1040px) - var(--header-height-desktop));
+    @media(max-width: 768px) {
+      margin: var(--header-height-mobile) auto 0 auto;
+      height: calc((778px) - var(--header-height-mobile));
+    }
+    .block_w_gif__maskGif {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      height: calc((1040px) - var(--header-height-desktop));
+      @media(max-width: 768px) {
+        height: calc((778px) - var(--header-height-mobile));
+      }
+    }
+    .block_w_content {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      .block_w_content__title{
+        position: relative;
+        z-index: 1;
+        color: var(--color-main);
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140px;
+        @media(max-width: 768px) {
+          font-size: 32px;
+        }
+      }
+    }
+    .block_w_earthGif {
+      padding-right: 55.87px;
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      @media(max-width: 768px) {
+        padding: 0;
+        left: 100%;
+      }
+      .block_w_earthGif__earthGif {
+        position: relative;
+        z-index: 2;
+        width: 920px;
+        height: 918px;
+        @media(max-width: 768px) {
+          width: 389px;
+          height: 386px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
