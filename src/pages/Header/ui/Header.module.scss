@@ -14,10 +14,11 @@
     position: absolute;
     margin: var(--header-height-desktop) auto 0 auto;
     width: 100%;
-    height: 100%;
+    height: calc(100vh + var(--header-height-desktop));
     overflow: hidden;
     @media(max-width: 768px) {
       margin: var(--header-height-mobile) auto 0 auto;
+      height: calc(100vh + var(--header-height-mobile));
     }
     .block_w_gif__maskGif {
       position: relative;
