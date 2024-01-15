@@ -17,7 +17,9 @@ const FormEmail: FC = () => {
     // .then(console.log('done'))
     // .catch(console.log('error'))
     setInputValue('')
-    document.querySelector('input').value = '';
+    const inputElement = document.querySelector('input');
+
+    if (inputElement) inputElement.value = '';
   }
   return (
     <div className={cls.form_email}>
