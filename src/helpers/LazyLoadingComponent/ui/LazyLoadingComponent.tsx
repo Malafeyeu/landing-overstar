@@ -22,8 +22,8 @@ const LazyLoadComponent: FC = () => {
   }
 
   const handleScroll = () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-      loadPage()
+    if (window.innerHeight + window.scrollY + 1 >= document.documentElement.offsetHeight) {
+      loadPage();
     }
   };
 
