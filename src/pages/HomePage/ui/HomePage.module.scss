@@ -3,10 +3,10 @@
 .container_main {
   position: relative;
   width: 100%;  
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   // @media(max-width: 768px) {
-  //   height: 100%;
+  //   height: 734px;
   // }
   .container_main__bg {
     position: relative;
