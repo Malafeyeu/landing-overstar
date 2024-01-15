@@ -2,30 +2,22 @@
 
 .container_header {
   margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  height: 1240px;
-  @media(max-width: 768px) {
-    height: var(--height-mobile);
-  }
+  width: 100%;
+  height: 100vh;
   .block_w_gif {
     position: absolute;
     margin: var(--header-height-desktop) auto 0 auto;
     width: 100%;
-    height: calc((1240px) - var(--header-height-desktop));
+    height: 100%;
+    overflow: hidden;
     @media(max-width: 768px) {
       margin: var(--header-height-mobile) auto 0 auto;
-      height: calc((778px) - var(--header-height-mobile));
     }
     .block_w_gif__maskGif {
       position: relative;
       z-index: 0;
       width: 100%;
-      height: calc((1240px) - var(--header-height-desktop));
-      @media(max-width: 768px) {
-        height: calc((778px) - var(--header-height-mobile));
-      }
+      height: 100%
     }
     .block_w_content {
       position: absolute;
@@ -33,7 +25,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      top: 50%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
@@ -60,7 +52,7 @@
       align-items: center;
       width: 100%;
       height: 100%;
-      top: 50%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
