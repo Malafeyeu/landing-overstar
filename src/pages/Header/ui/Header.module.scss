@@ -3,10 +3,8 @@
 .container_header {
   margin: 0 auto;
   width: 100%;
-  height: calc(100vh + var(--header-height-desktop));
-  @media(max-width: 768px) {
-    height: calc(100vh + var(--header-height-mobile));
-  }
+  height: 100vh;
+  
   .block_w_gif {
     position: absolute;
     margin: var(--header-height-desktop) auto 0 auto;
