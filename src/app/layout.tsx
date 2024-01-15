@@ -1,8 +1,5 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
 import './styles/index.scss'
-
-const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Overstars',
@@ -16,6 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+      </head>
       <body 
         id='root'
         suppressHydrationWarning={true}
