@@ -1,5 +1,5 @@
-import { LazyLoadComponent } from "../helpers/LazyLoadingComponent";
-import Header from "../pages/Header/ui/Header";
+import { LazyLoadComponent } from '@/src/helpers/LazyLoadingComponent';
+import Header from '@/src/pages/Header/ui/Header';
 
 export default function Home() {
   return (
