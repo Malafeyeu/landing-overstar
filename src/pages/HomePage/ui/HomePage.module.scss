@@ -3,11 +3,11 @@
 .container_main {
   position: relative;
   width: 100%;  
-  min-height: 100%;
+  height: 1044px;
   overflow: hidden;
-  // @media(max-width: 768px) {
-  //   height: 734px;
-  // }
+  @media(max-width: 768px) {
+    height: 734px;
+  }
   .container_main__bg {
     position: relative;
     z-index: 0;
